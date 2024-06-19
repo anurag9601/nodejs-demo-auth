@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log-in</title>
+</head>
+<body>
+    <h1>log-in</h1>
+    <form method="post" action="/user/login">
+        <label>Enter your email</label>
+        <input type="text" placeholder="Enter your email" name="email">
+        <br>
+        <label>Your password</label>
+        <input type="text" placeholder="your password" name="password">
+        <br>
+        <button type="submit">log-in</button>
+    </form>
+    <% if (locals.msg) { %>
+     <p><%= msg %></p>
+    <% } %>
+</body>
+</html>
